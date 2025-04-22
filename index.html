@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>DINGDA Teams</title>
+    <meta name="description" content="在 DINGDA Teams 中与其他用户安全地协作、分享、交流，并遵守我们的基本道德原则。">
+    <meta name="keywords" content="DINGDA Teams, Teams, 团队, 聊天室, 聊天, 私聊, 群聊, 交流, chat, communicate, DINGDA, HeyGPT, 订达, HendyTurtle, 小龟壳, Hendy">
+    <meta name="author" content="HendyTurtle">
+    <meta property="og:title" content="DINGDA Teams | 安全加密的协作平台 - Simple, Safe, Silent.">
+    <meta property="og:description" content="在加密保护下进行团队沟通，支持私聊、群组、文件分享，遵守严格隐私保护政策">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="DINGDA Teams">
+    <link rel="icon" href="https://ai.hendyturtle.site:2025/static/images/logo.svg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            background-color: #101c16;
+            color: #e7fbe7;
+            font-family: 'Segoe UI', 'Microsoft YaHei', Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        
+        .flash-messages {
+            margin-bottom: 20px;
+            width: 100%;
+        }
+        
+        .flash-message {
+            padding: 10px 15px;
+            margin-bottom: 10px;
+            border-radius: 4px;
+            color: white;
+            background-color: #ff4757;
+            text-align: center;
+        }
+        
+        .auth-container {
+            background: rgba(16, 28, 22, 0.85);
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+        
+        .auth-container h1 {
+            margin-bottom: 24px;
+            color: #1db954;
+        }
+        
+        .auth-container form {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+        
+        .auth-container input {
+            padding: 10px;
+            border: none;
+            border-radius: 8px;
+            background: #1b2b23;
+            color: #e7fbe7;
+            font-size: 1rem;
+        }
+        
+        .auth-container button {
+            padding: 10px;
+            border: none;
+            border-radius: 8px;
+            background: #1db954;
+            color: #fff;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        .auth-container button:hover {
+            background-color: #13a34a;
+        }
+        
+        .info-link {
+            color: #1db954;
+            text-decoration: none;
+            margin-top: 16px;
+            display: inline-block;
+        }
+        
+        body {
+            background-color: #101c16;
+            color: #e7fbe7;
+            font-family: 'Segoe UI', 'Microsoft YaHei', Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        
+        .auth-container {
+            background: rgba(16, 28, 22, 0.85);
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+        
+        .auth-container h1 {
+            margin-bottom: 24px;
+            color: #1db954;
+        }
+        
+        .auth-container form {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+        
+        .auth-container input {
+            padding: 10px;
+            border: none;
+            border-radius: 8px;
+            background: #1b2b23;
+            color: #e7fbe7;
+            font-size: 1rem;
+        }
+        
+        .auth-container button {
+            padding: 10px;
+            border: none;
+            border-radius: 8px;
+            background: #1db954;
+            color: #fff;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        .auth-container button:hover {
+            background-color: #13a34a;
+        }
+        
+        .info-link {
+            color: #1db954;
+            text-decoration: none;
+            margin-top: 16px;
+            display: inline-block;
+        }
+        .info-container {
+            width: 500px;
+            max-width: 90%;
+            background: #121e17;
+            padding: 30px 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            margin: 50px auto;
+            color: #e7fbe7;
+        }
+        
+        .info-logo {
+            width: 100px;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            color: #fff;
+            margin-bottom: 15px;
+            font-size: 1.8rem;
+        }
+        
+        p {
+            color: #ccc;
+            line-height: 1.6;
+            margin-bottom: 15px;
+            font-size: 0.95rem;
+        }
+        
+        p a {
+            color: #1db954;
+            text-decoration: none;
+        }
+        p a:hover {
+            text-decoration: underline;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 25px 0;
+            text-align: left;
+            display: inline-block;
+        }
+        
+        li {
+            margin-bottom: 10px;
+        }
+
+        li a {
+            color: #1db954;
+            text-decoration: none;
+            font-size: 0.95rem;
+        }
+        li a:hover {
+            text-decoration: underline;
+        }
+        
+        .back-link {
+            display: inline-block;
+            margin-top: 20px;
+            color: #aaa;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+        .back-link:hover {
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="info-container"> 
+        <img src="/static/images/logo.svg" alt="DINGDA Teams" class="info-logo"> 
+        
+        <h1>安全加密的协作平台</h1>
+        <p>在 DINGDA Teams 中与其他用户安全地协作、分享、交流。</p>
+        <p>这是一个快捷网址，正在跳转至官网地址，请稍候...</p>
+        <p>如果没有正确跳转，您可以点击 <a href="https://ai.hendyturtle.site:2025">这里</a> 手动前往官网。</p>
+        <ul>
+            <li><a href="https://ai.hendyturtle.site:2025">手动前往</a></li>
+        </ul>
+        &nbsp;
+        <a href="mailto:hi@hendyturtle.site" class="back-link">联系我们</a>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            setTimeout(() => {
+                window.location = 'https://ai.hendyturtle.site:2025'
+            }, 1200);
+        });
+    </script>
+</body>
+</html>
